@@ -48,14 +48,11 @@ public class DaggerTestNGListener
     @Override
     public void onExecutionStart() {
 
-        System.out.println("onExecutionStart()");
     }
 
 
     @Override
     public void onExecutionFinish() {
-
-        System.out.println("onExecutionFinish()");
 
         TESTS.clear();
         MODULES.clear();
@@ -65,8 +62,6 @@ public class DaggerTestNGListener
     @Override
     public void run(final IHookCallBack callBack,
                     final ITestResult testResult) {
-
-        System.out.println("run(" + callBack + ", " + testResult + ")");
 
         try {
             injectTestResult(testResult);
@@ -82,8 +77,6 @@ public class DaggerTestNGListener
     @Override
     public void run(final IConfigureCallBack callBack,
                     final ITestResult testResult) {
-
-        System.out.println("run(" + callBack + ", " + testResult + ")");
 
         try {
             injectTestResult(testResult);
@@ -119,7 +112,6 @@ public class DaggerTestNGListener
         for (int i = 0; i < moduleClasses.length; i++) {
             final Class<?> moduleClass = moduleClasses[i];
             if (moduleClass.getAnnotation(Module.class) == null) {
-                System.err.println("not annotated with @Module: " + moduleClass);
                 continue;
             }
             moduleInstances[i] = MODULES.get(moduleClass);
@@ -130,7 +122,6 @@ public class DaggerTestNGListener
         }
 
         ObjectGraph.create(moduleInstances).inject(testInstance);
-        System.out.println("injected");
 
         TESTS.put(testClass, testInstance);
     }

@@ -15,32 +15,32 @@
   <version>0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>dagger-testng</name>
-  <description>verbose java</description>
-  <url>https://github.io/jinahya/dagger-testng</url>
+  <name>${project.artifactId}</name>
+  <description>dagger for testng</description>
+  <url>https://github.com/jinahya/${project.artifactId}</url>
   <inceptionYear>2015</inceptionYear>
-  <licenses>
+  <!--  <licenses>
     <license>
       <name>Apache 2</name>
       <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
       <distribution>repo</distribution>
       <comments>A business-friendly OSS license</comments>
     </license>
-  </licenses>
+  </licenses>-->
 
   <prerequisites>
     <maven>3.0.4</maven>
   </prerequisites>
 
   <scm>
-    <connection>scm:git:git@github.com:jinahya/dagger-testng.git</connection>
-    <developerConnection>scm:git:git@github.com:jinahya/dagger-testng.git</developerConnection>
-    <url>scm:git:git@github.com:jinahya/dagger-testng.git</url>
+    <connection>scm:git:git@github.com:jinahya/${project.artifactId}.git</connection>
+    <developerConnection>scm:git:git@github.com:jinahya/${project.artifactId}.git</developerConnection>
+    <url>scm:git:git@github.com:jinahya/${project.artifactId}.git</url>
     <tag>HEAD</tag>
   </scm>
   <issueManagement>
     <system>GitHub Issues</system>
-    <url>https://github.com/jinahya/dagger-testng/issues</url>
+    <url>https://github.com/jinahya/${project.artifactId}/issues</url>
   </issueManagement>
   <ciManagement/>
 
