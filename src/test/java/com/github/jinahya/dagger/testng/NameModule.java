@@ -25,11 +25,11 @@ import dagger.Provides;
  *
  * @author Jin Kwon &lt;jinahya_at_gmail.com&gt;
  */
-@Module(injects = IdentityTest.class)
-public class IdentityModule {
+@Module(injects = NameModuleTest.class)
+public class NameModule {
 
 
-    @Provides public String providesName() {
+    @Provides public String provideName() {
 
         return "name";
     }

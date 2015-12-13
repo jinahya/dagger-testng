@@ -5,7 +5,7 @@
 [![Maven Central](https://img.shields.io/maven-central/v/com.github.jinahya/dagger-testng.svg)](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22dagger-testng%22)
 [![Domate via Paypal](https://img.shields.io/badge/donate-paypal-blue.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_cart&business=A954LDFBW4B9N&lc=KR&item_name=GitHub&amount=5%2e00&currency_code=USD&button_subtype=products&add=1&bn=PP%2dShopCartBF%3adonate%2dpaypal%2dblue%2epng%3aNonHosted)
 
-means to work just like [@Guice](http://testng.org/javadoc/org/testng/annotations/Guice.html).
+This library enables [Dagger](https://github.com/square/dagger) works like [@Guice](http://testng.org/javadoc/org/testng/annotations/Guice.html). Inspired by [hk2-testng](https://github.com/saden1/hk2-testng).
 ## dependencies
 Add it as a `test`-scoped dependency.
 ```xml
@@ -35,7 +35,7 @@ You, of course, should add related dependencies by yourself.
 ```
 ## usages
 Use it just like you would do with [`@Guice`](http://testng.org/javadoc/org/testng/annotations/Guice.html) or `@HK2`.
-~~~java
+```java
 @Dagger(modules = MyModule.class)
 public class MyTest {
 
@@ -46,6 +46,6 @@ public class MyTest {
     @Inject
     String name;
 }
-~~~
+```
 <hr/>
 [![Domate via Paypal](https://img.shields.io/badge/donate-paypal-blue.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_cart&business=A954LDFBW4B9N&lc=KR&item_name=GitHub&amount=5%2e00&currency_code=USD&button_subtype=products&add=1&bn=PP%2dShopCartBF%3adonate%2dpaypal%2dblue%2epng%3aNonHosted)

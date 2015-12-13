@@ -18,13 +18,16 @@
 package coffee;
 
 
-import com.github.jinahya.dagger.testng.Dagger;
+import dagger.Module;
+import dagger.ObjectGraph;
+import dagger.Provides;
 import javax.inject.Inject;
+import javax.inject.Singleton;
 import org.mockito.Mockito;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 
-@Dagger(modules = CoffeeMakerModule.class)
 public class CoffeeMakerTest {
 
 
@@ -32,6 +35,28 @@ public class CoffeeMakerTest {
 
 
     @Inject Heater heater;
+
+
+    @BeforeClass
+    public void setUp() {
+        ObjectGraph.create(new TestModule()).inject(this);
+    }
+
+
+    @Module(
+        includes = DripCoffeeModule.class,
+        injects = CoffeeMakerTest.class,
+        overrides = true
+    )
+    static class TestModule {
+
+
+        @Provides @Singleton
+        Heater provideHeater() {
+            return Mockito.mock(Heater.class);
+        }
+
+    }
 
 
     @Test public void testHeaterIsTurnedOnAndThenOff() {
