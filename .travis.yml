@@ -18,6 +18,7 @@ before_script:
 
 # 4.
 script:
+  - mvn clean test
 
 # 5.
 after_failure:
