@@ -24,9 +24,9 @@ import org.mockito.Mockito;
 
 
 @Module(includes = DripCoffeeModule.class,
-        injects = CoffeeMakerTest.class,
+        injects = AnotherCoffeeMakerTest.class,
         overrides = true)
-public class CoffeeMakerModule {
+public class AnotherCoffeeMakerModule {
 
 
     @Provides @Singleton
