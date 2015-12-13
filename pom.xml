@@ -10,7 +10,7 @@
 
   <groupId>com.github.jinahya</groupId>
   <artifactId>dagger-testng</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
   <packaging>jar</packaging>
 
   <name>${project.artifactId}</name>
@@ -22,13 +22,16 @@
     <connection>scm:git:git@github.com:jinahya/${project.artifactId}.git</connection>
     <developerConnection>scm:git:git@github.com:jinahya/${project.artifactId}.git</developerConnection>
     <url>scm:git:git@github.com:jinahya/${project.artifactId}.git</url>
-    <tag>0.1.0</tag>
+    <tag>0.1.1</tag>
   </scm>
   <issueManagement>
     <system>GitHub Issues</system>
     <url>https://github.com/jinahya/${project.artifactId}/issues</url>
   </issueManagement>
-  <ciManagement />
+  <ciManagement>
+    <system>Travis CI</system>
+    <url>https://travis-ci.org/jinahya/dagger-testng</url>
+  </ciManagement>
   <distributionManagement>
     <site>
       <id>github</id>
@@ -62,6 +65,12 @@
       <artifactId>dagger-compiler</artifactId>
       <version>${com.squareup.dagger.version}</version>
       <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>1.10.19</version>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.testng</groupId>
