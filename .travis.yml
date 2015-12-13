@@ -7,7 +7,7 @@ sudo: required
 
 # 1.
 before_install:
-  - suoe apt-get update && sudo apt-get install oracle-java8-installer
+  - sudo apt-get update && sudo apt-get install oracle-java8-installer
   - java -version
 
 # 2.
