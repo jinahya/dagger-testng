@@ -28,7 +28,10 @@
     <system>GitHub Issues</system>
     <url>https://github.com/jinahya/${project.artifactId}/issues</url>
   </issueManagement>
-  <ciManagement />
+  <ciManagement>
+    <system>Travis CI</system>
+    <url>https://travis-ci.org/jinahya/dagger-testng</url>
+  </ciManagement>
   <distributionManagement>
     <site>
       <id>github</id>
