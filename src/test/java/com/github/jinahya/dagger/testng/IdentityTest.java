@@ -33,6 +33,7 @@ public class IdentityTest {
 
     @Test
     public void printName() {
+
         logger.debug("name: {}", name);
     }
 
