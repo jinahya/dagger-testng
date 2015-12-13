@@ -7,13 +7,31 @@
 Mean to work just like https://github.com/saden1/hk2-testng.
 ## dependency
 Add it as a `test`-scoped dependency.
-~~~xml
+```xml
 <dependency>
   <groupId>com.github.jinahya</groupId>
   <artifactId>dagger-testng</artifactId>
   <scope>test</scope>
 </dependency>
-~~~
+```
+You, of course, should add related dependencies by yourself.
+```xml
+<dependency>
+  <groupId>com.squareup.dagger</groupId>
+  <artifactId>dagger</artifactId>
+  <scope>test</scope>
+</dependency>
+<dependency>
+  <groupId>com.squareup.dagger</groupId>
+  <artifactId>dagger-compiler</artifactId>
+  <scope>test</scope>
+</dependency>
+<dependency>
+  <groupId>org.testng</groupId>
+  <artifactId>testng</artifactId>
+  <scope>test</scope>
+</dependency>
+```
 ## usage
 Use it just like you would do with [`@Guice`](http://testng.org/javadoc/org/testng/annotations/Guice.html) or `@HK2`.
 ~~~java
